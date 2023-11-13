@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="20dp">
+
+
+    <RelativeLayout
+        android:id="@+id/NameLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mentoree"
+            android:textSize="25dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_action_name"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/hallOfFameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hall of Fame"
+        android:textSize="35dp"
+        android:layout_below="@id/NameLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/HallOfFameRecyclerView"
+        android:layout_below="@id/hallOfFameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"/>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/HallOfFameRecyclerView"
+        android:id="@+id/suggestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/suggestionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suggestions"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="-20dp"
+            android:id="@+id/suggestionRecyclerView"
+            android:layout_below="@id/suggestionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</RelativeLayout>
